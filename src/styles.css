@@ -1,0 +1,313 @@
+@import url('https://rsms.me/inter/inter.css');
+
+html,
+body,
+#root,
+.bg,
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #171717;
+  font-family: 'Inter var', sans-serif;
+}
+
+.bg {
+  position: absolute;
+  background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%);
+}
+
+#hero-section> h1 {
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  font-weight: 900;
+  font-size: 3.5em;
+  margin: 0;
+  color: peru;
+  line-height: 0.8em;
+  letter-spacing: -2px;
+  text-align: left;
+}
+
+#hero-section> h1 > span {
+  white-space: pre;
+}
+
+#hero-section> .layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(63, 12, 88, 0.25) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+#hero-section> span.header {
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  width: 500px;
+  transform: translate3d(0, -50%, 0);
+  font-size: 9em;
+  line-height: 0.9em;
+  pointer-events: none;
+  top: 350px;
+  left: 50px;
+}
+
+#hero-section> span.header-left {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  transform: translate3d(0, -50%, 0);
+  line-height: 1em;
+  top: 200px;
+  left: 60px;
+  font-size: 4em;
+  width: 200px;
+}
+
+#hero-section> a {
+  font-weight: 400;
+  font-size: 14px;
+  color: inherit;
+  position: absolute;
+  display: inline;
+  text-decoration: none;
+  z-index: 1;
+  color: white;
+}
+
+#hero-section> a.top-left {
+  top: 60px;
+  left: 60px;
+}
+
+#hero-section> a.top-right {
+  top: 60px;
+  right: 60px;
+}
+
+#hero-section> a.bottom-left {
+  bottom: 60px;
+  left: 60px;
+}
+
+#hero-section> a.bottom-right {
+  bottom: 60px;
+  right: 60px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 20px;
+}
+
+::selection {
+  background: #2ddab8;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0c0f13;
+  overflow: hidden;
+  font-family: "Sulphur Point", sans-serif;
+  color: #8b8b8b;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #545454;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #8b8b8b;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loading {
+  padding: 10px;
+  transform: translate3d(-50%, -50%, 0);
+  color: #8b8b8b;
+}
+
+.scrollArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.frame {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.frame__title {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+}
+
+.frame__links {
+  margin: 1rem 0;
+}
+
+.frame__link:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.frame__nav .frame__link:first-child {
+  margin-right: 1.5rem;
+}
+
+.bottom-left {
+  padding: 1.5rem;
+  transform: translate3d(0, -100%, 0) !important;
+}
+
+.canvas > div {
+  z-index: 10000000;
+}
+
+#root > div > div {
+  pointer-events: none;
+}
+
+@media screen and (min-width: 53em) {
+  body {
+    overflow: hidden;
+  }
+  .frame {
+    display: grid;
+    height: 100vh;
+    padding: 2rem 3.7rem;
+    pointer-events: none;
+    align-content: space-between;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title links"
+      "... ..."
+      "... nav";
+  }
+  .frame__title {
+    grid-area: title;
+  }
+  .frame__links {
+    grid-area: links;
+    justify-self: end;
+    margin: 0;
+  }
+  .frame__link {
+    pointer-events: auto;
+  }
+  .frame__nav {
+    grid-area: nav;
+    justify-self: end;
+  }
+  .bottom-left {
+    padding: 0 0 2rem 3.7rem;
+  }
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+.arrow{
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.arrow span{
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1.5px solid #06A8FF;
+  border-right: 1.5px solid #06A8FF;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 3s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+#hero-title {
+  position: fixed;
+  top: 15%;
+}
+
+
+.content {
+  padding-top: 10px;
+  transform: translate3d(50%, 0, 0);
+  text-align: left;
+  background: #202035;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 30em;
+}
