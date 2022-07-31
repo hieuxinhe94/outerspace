@@ -31,6 +31,7 @@ const Drone = React.memo(({ data }) => {
     <group ref={ref} scale={[15, 15, 15]}>
        <mesh position={[5, -5, -5]}>
         <sphereGeometry args={[0.75, 32, 32]} />
+        {/* <boxGeometry args={[2, 2, 2]} /> */}
         <meshStandardMaterial map={people1} roughness={1} fog={true} />
         <Html distanceFactor={10}>
         <div class="content">

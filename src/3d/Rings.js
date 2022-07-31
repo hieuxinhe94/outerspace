@@ -13,7 +13,7 @@ export default function Rings() {
       <mesh
         key={i}
         position={pos}
-        scale={[30 + i * 5 * f, 30 + i * 5 * f, 30 + i * 5 * f]}
+        scale={[30 + i * 2 * f, 30 + i * 2 * f, 30 + i * 2 * f]}
         onUpdate={self => self.quaternion.setFromRotationMatrix(matrix)}
         geometry={geometry}
         material={material}

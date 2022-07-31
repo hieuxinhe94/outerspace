@@ -79,19 +79,17 @@ function Content() {
   const { contentMaxWidth: w, canvasWidth, canvasHeight, mobile } = useBlock()
   return (
     <>
- 
-      <Block factor={1.2} offset={5.7}>
-        <MultilineText top left size={w * 0.15} lineHeight={w / 5} position={[-w / 3.5, 0, -1]} color="#2fe8c3" text={"four\nzero\nzero"} />
+      <Block factor={1.2} offset={0}>
+      <group position={[0, 0, 0]}>
+        <Text   size={w * 0.04} top>
+          "aaaaaa"
+        </Text>
+      </group>
       </Block>
-      {state.paragraphs.map((props, index) => (
+      {
+      state.paragraphs.map((props, index) => (
         <Paragraph key={index} index={index} {...props} image={images[index]} />
       ))}
-      {state.stripes.map(({ offset, color, height }, index) => (
-        <Block key={index} factor={-1.5} offset={offset}>
-          <Plane args={[50, height, 32, 32]} shift={-4} color={color} rotation={[0, 0, Math.PI / 8]} position={[0, 0, -10]} />
-        </Block>
-      ))}
-      
     </>
   )
 }
@@ -117,7 +115,6 @@ export default function App() {
       node.style.display = "block";
     }
 
-
     return (state.top.current = e.target.scrollTop)
   }
   useEffect(() =>  { console.log("scroll useEffect"); return  onScroll({ target: scrollArea.current })}, []); 
@@ -125,11 +122,9 @@ export default function App() {
   const actions = useStore((state) => state.actions)
   return (
     <>
-     
-
     <section ref={heroArea} id='hero-section'>
       <div className="bg" />
-      <div onClick={actions.shoot}>
+      <div onPointerMove={actions.updateMouse} onClick={actions.shoot}>
       <Canvas
         linear
         mode="concurrent"
@@ -158,48 +153,49 @@ export default function App() {
       
     </div>
     <h1>
+    <div class="hero-slogan">
       <Typewriter
         onInit={(typewriter) => {
-          typewriter.pauseFor(2500)
-          .typeString('Explore')
-          .pauseFor(50)
-          .typeString(' & ')
-          .typeString('Build')
-          .typeString(' <br/> <span style={{ fontSize: \'0.4em\' }}>your</span>  Metaverse ')
+          typewriter.pauseFor(500)
+          .typeString('Welcome to <br/><span style="color: #27ae60;">the OuterSpace</span>!')
           .pauseFor(300)
           //.deleteChars(50)
           .deleteAll(1)
-          .typeString('Welcome to <br/><span style="color: #27ae60;">TheMetaverse</span>!')
+          .typeString('Explore')
+          .pauseFor(50)
+          .typeString(', Share')
+          .pauseFor(50)
+          .typeString(' & ')
+          .typeString('Build')
+          .typeString(' <br/> <span style={{ fontSize: \'0.4em\' }}></span> what you Dream!')
           .pauseFor(1000)
           .start();
         }}
-      /></h1>
+      />
+         </div>
+       <div>
+       <a href='#1' class="btn-lg" type="button" value="Go my space" > Go my space</a>  
+       </div>
+      </h1>
       <div className="layer" />
       <Loader />
-      <a href="#1" className="top-left" children="MyVerse" />
-      <a href="#2" className="top-right" children="Sign In" />
-      <a href="#3" className="bottom-left" children="Experiment version." />
-
+      <a href="#1" className="top-left logo" children="OuterSpace" >
+        <img src='https://i.postimg.cc/KjrYZKZ4/logo.jpg' alt='outerspace logo' height='35' width='35' />
+        <a href="#2"  children="OuterSpace" />
+      </a>
+      <a href="#2" className="top-right" children="Experiment V1" />
       <div class="arrow">
                 <span></span>
                 <span></span>
                 <span></span>
-      
+                <i class="">Scroll to see more</i>
       </div>
-      <i>Scroll to see </i>
       </section>
- 
-      <section id='story-section'>
-      
-      
-      </section>
-
 
       <section id='feature-section'>
       <Canvas linear dpr={[1, 2]} orthographic camera={{ zoom: state.zoom, position: [0, 0, 500] }}>
         <Suspense fallback={<Html center className="loading" children="Loading..." />}>
           <Content />
-           
         </Suspense>
       </Canvas>
       <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
@@ -208,8 +204,8 @@ export default function App() {
         ))}
       </div>
       </section>
+
      
     </>
-    
   )
 }

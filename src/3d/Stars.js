@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 
-export default function Stars({ count = 2000 }) {
+export default function Stars({ count = 1000 }) {
   const positions = useMemo(() => {
     let positions = []
     for (let i = 0; i < count; i++) {
