@@ -8,7 +8,7 @@ import * as audio from './audio'
 
 const state = {
   sections: 9,
-  pages: 8,
+  pages: 5,
   zoom: 50,
   paragraphs: [
     {
@@ -32,7 +32,7 @@ const state = {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      offset: 4,
+      offset: 3,
       factor: 2.25,
       header: "Catalina",
       topic: "E-Learning, Metaverse",
@@ -42,7 +42,7 @@ const state = {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      offset: 5,
+      offset: 4,
       factor: 2.0,
       header: "Building 21",
       topic: "E-Learning, Metaverse",

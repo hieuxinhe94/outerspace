@@ -88,7 +88,7 @@ body {
   color: white;
 }
 
-.btn-lg {
+.btn-round-lg {
   color: white;
   background: rgb(21 16 65);
   border: solid 1px;
@@ -100,11 +100,39 @@ body {
   min-width: 80px;
 }
 
-.btn-lg:hover {
+.btn-lg {
+  color: white;
+  background: rgb(21 16 65);
+  border: solid 1px;
+  padding: 5px 15px 5px 15px;
+  z-index: 1;
+  font-size: 0.6em;
+  text-align: center;
+  min-width: 80px;
+}
+
+.lb-lg {
+  color: white;
+  background: rgb(21 16 65);
+  z-index: 1;
+  font-size: 0.6em;
+  text-align: center;
+  min-width: 80px;
+}
+
+.btn-round-lg:hover {
   color:rgb(21 16 65);
   background:  rgb(97, 97, 117);
   cursor: pointer;
   z-index: 1;
+}
+
+.btn-lg -lg:hover {
+  color:rgb(21 16 65);
+  background:  rgb(97, 97, 117);
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 10px;
 }
 
 .hero-slogan {
