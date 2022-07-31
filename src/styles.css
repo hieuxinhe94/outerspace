@@ -13,7 +13,7 @@ canvas {
 }
 
 body {
-  background: rgb(21 16 65);
+  background: rgb(21 16 65) !important;
   font-family: 'Inter var', sans-serif;
 }
 
@@ -24,7 +24,7 @@ body {
 
 #hero-section> h1 {
   position: absolute;
-  top: 120px;
+  top: 100px;
   left: 60px;
   font-weight: 900;
    
@@ -114,6 +114,14 @@ body {
   min-width: 80px;
 }
 
+.lb-sm {
+  color: white;
+  z-index: 1;
+  font-size: 0.4em;
+  text-align: center;
+  min-width: 80px;
+}
+
 .lb-lg {
   color: white;
   
@@ -151,13 +159,13 @@ body {
   width: 1000px;
   overflow: hidden;
   position: absolute;
-  top: 20px;
+  
   
   font-weight: 900;
-  font-size: 2.5em;
+  font-size: 1.5em;
   margin: 0;
   color: peru;
-  line-height: 0.8em;
+  line-height: 1em;
   letter-spacing: -2px;
   text-align: left;
   z-index: 1;
@@ -174,7 +182,7 @@ body {
 }
 
  .bottom-left {
-  bottom: 10px;
+   
    
 }
 
@@ -459,4 +467,75 @@ a:hover {
   
   color: rgb(255, 255, 255);
   text-rendering: optimizelegibility;
+}
+ 
+
+body{
+  display:grid;
+  place-items:center;
+  height:100vh;
+  background:#4C23E8;
+  margin:0;
+  padding:0;
+}
+
+.menu-icon{
+ display:flex;
+  flex-direction:column;
+  width:30px;
+  cursor:pointer;
+  margin-right: 100px;
+  z-index: 5;
+}
+
+.menu-icon >span{
+  background: #fff;
+  border-radius:10px;
+  height:3px;
+  margin: 3px 0;
+  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+}
+
+
+.menu-icon >span:nth-of-type(1){
+  width:50%;
+  
+}
+
+.menu-icon >span:nth-of-type(2){
+  width:100%;
+}
+
+
+.menu-icon > span:nth-of-type(3){
+  width:75%;
+ 
+}
+
+
+.menu-icon > input[type="checkbox"]{
+  display:none;
+}
+
+
+.menu-icon > input[type="checkbox"]:checked ~ span:nth-of-type(1){
+  transform-origin:bottom;
+  transform:rotatez(45deg) translate(2px,0px)
+}
+
+
+.menu-icon > input[type="checkbox"]:checked ~ span:nth-of-type(2){
+  
+  transform-origin:top;
+  transform:rotatez(-45deg)
+}
+
+
+.menu-icon > input[type="checkbox"]:checked ~ span:nth-of-type(3){
+  
+  transform-origin:bottom;
+  width:50%;
+  transform: translate(10px,-5px) rotatez(45deg);
+
 }
