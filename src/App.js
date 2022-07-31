@@ -265,7 +265,7 @@ export default function App() {
           .pauseFor(50)
           .typeString(' & ')
           .typeString('Build')
-          .typeString(' <br/> <span style={{ fontSize: \'0.4em\' }}></span> what you Dream!')
+          .typeString(' <br/> <span style={{ fontSize: \'0.4em\' }}></span> what you\'re Dream!')
           .pauseFor(1000)
           .start();
         }}
@@ -278,16 +278,24 @@ export default function App() {
       <div className="layer" />
       <Loader />
       <a href="#1" className="top-left logo" children="OuterSpace" >
-        <img src='https://i.postimg.cc/KjrYZKZ4/logo.jpg' alt='outerspace logo' height='35' width='35' />
-        <a href="#2"  children="OuterSpace" />
+       
+        <a href="#2" className='lb-lg'> <img src='logo-text.png' alt='outerspace logo' height='35' width='auto' /> </a>
       </a>
+      <div href='#1' className="absolute top-right menu-icon" type="button" value="Go my space" > 
+      <label class="menu-icon" for="check">
+        <input type="checkbox" id="check"/> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      </div>  
       <a href='#1' className="absolute top-right btn-round-lg" type="button" value="Go my space" > SIGN IN</a>  
-      <a href="#2" className="absolute bottom-left" children="Experiment V1" />
+      <a href="#2" className="absolute bottom-left lb-sm" children="Experiment V1" />
       <div class="arrow">
                 <span></span>
                 <span></span>
                 <span></span>
-                <i class="">Scroll to see more</i>
+                <i class="lb-lg">Scroll to see more</i>
       </div>
       </section>
 
