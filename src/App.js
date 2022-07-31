@@ -1,11 +1,11 @@
 import React, { Suspense,useRef,useEffect, useMemo }from 'react'
-import { Canvas, useLoader,useFrame, } from '@react-three/fiber'
+import { Canvas, useLoader} from '@react-three/fiber'
 import { TextureLoader, LinearFilter } from "three"
 import {state} from "./store"
 import { Block, useBlock } from "./components/block"
-import { Text, MultilineText } from "./components/Text"
+import { Text } from "./components/Text"
 import Plane from "./components/Plane"
-import lerp from "lerp"
+
 import "./styles.css"
 import { Loader, useGLTF, Html } from '@react-three/drei'
 
@@ -48,7 +48,7 @@ function FeatureSection({ image, index, offset, factor, header, aspect, text, to
   const left = !(index % 2)
   const color ="#FFFFF"
   return (
-    <Block factor={factor} offset={offset}>
+    <Block factor={factor} offset={offset} className="aaa">
       <group position={[left ? -alignRight : alignRight, 0, 0]}>
         <Plane map={image} args={[1, 1, 16, 32]} shift={50} size={size} aspect={aspect} 
         position={[((left ? -w : w) * size * 0.25) / 2, 1.5, -10]}
@@ -85,7 +85,7 @@ function Content() {
     state.paragraphs.map(({ image }) => image)
   )
   useMemo(() => images.forEach((texture) => (texture.minFilter = LinearFilter)), [images])
-  const { contentMaxWidth: w, canvasWidth, canvasHeight, mobile } = useBlock()
+  const { contentMaxWidth: w, mobile } = useBlock()
   return (
     <>
       <Block factor={1.2} offset={0}>
@@ -99,13 +99,108 @@ function Content() {
       state.paragraphs.map((props, index) => (
         <FeatureSection key={index} index={index} {...props} image={images[index]} />
       ))}
+
+      <JoinNow offset={2.5} />
+      <NewFeatures offset={2.6} />
+      <Footer offset={3.0}/>
     </>
   )
 }
-function Startup() {
-  const ref = useRef()
-  useFrame(() => (ref.current.material.opacity = lerp(ref.current.material.opacity, 0, 0.025)))
-  return <Plane ref={ref} color="#0e0e0f" position={[0, 0, 200]} scale={[100, 100, 1]} />
+
+function NewFeatures({offset}) {
+  const { contentMaxWidth: w} = useBlock()
+  const zoom =70;
+  return (<>
+  <Block factor={5} offset={offset}>
+  <group position={[0, 0, 0]}>
+    
+    <Html style={{ width: w * zoom, textAlign: "center"}}
+          position={[-w , 10, 1]} >
+          <div className='highlighting-section'>
+           <center class="highlighting-post"> 
+            <Highlight/>
+           </center>
+           <center class="highlighting-post"> 
+                  <Highlight/>
+            </center>
+          <div>
+          <center class="highlighting-post"> 
+            <Highlight/>
+          </center>  
+          </div>
+          </div>
+    </Html>
+
+  </group>
+  </Block>
+  </>)
+}
+function Highlight({index}) {
+  return (<>
+          <div>
+            <img class="lb-lg" alt='' height={200} width={250} src='https://cdn2.unrealengine.com/tfoa-blog-feed-01-1920x1080-75716018bc86.jpg'/>
+          </div>
+          <div >
+            <span class="lb-lg-2x"> New release brings Mesh to MetaHuman to Unreal Engine, and much more!</span>
+          </div>
+         
+          <div>
+            <span class="lb-lg">
+            This release of the MetaHuman framework brings not only new features for MetaHuman Creator.
+            This release of the MetaHuman framework brings not only new features for MetaHuman Creator.
+            </span>
+            </div>
+          <br/>
+         
+    </>)
+}
+
+function JoinNow({offset}) {
+  const { contentMaxWidth: w} = useBlock()
+  const zoom =70;
+  return (<>
+  <Block factor={5} offset={offset}>
+  <group position={[0, 0, 0]} >
+    
+    <Html style={{ width: w * zoom, textAlign: "center", zIndex: 2}}
+          position={[-w , 10, 1]} >
+          <div className='joinnow-section'>
+           <center> <span> Register to connect your friends</span></center>
+            <br/> 
+            <center> <span> Stay Connected with Peoples and their Dream.</span></center>
+            <br/> 
+          <div>
+            <a href="#1" class="btn-round-lg">SIGN UP NOW</a>
+          </div>
+          </div>
+    </Html>
+
+  </group>
+  </Block>
+  </>)
+}
+
+function Footer({offset}) {
+  const { contentMaxWidth: w} = useBlock()
+  const zoom =70;
+  return (<>
+  <Block factor={5} offset={offset}>
+  
+    
+    <Html style={{ width: w * zoom, textAlign: "center", zIndex: -1}}
+          position={[-w , 10, 1]} >
+          <div className='footer-section'>
+           <center> <span> Footer</span></center>
+            
+          <div>
+           
+          </div>
+          </div>
+    </Html>
+
+   
+  </Block>
+  </>)
 }
 
 export default function App() {
@@ -183,7 +278,7 @@ export default function App() {
       />
          </div>
        <div>
-       <a href='#1' class="btn-round-lg" type="button" value="Go my space" > Go my space</a>  
+      
        </div>
       </h1>
       <div className="layer" />
@@ -192,7 +287,8 @@ export default function App() {
         <img src='https://i.postimg.cc/KjrYZKZ4/logo.jpg' alt='outerspace logo' height='35' width='35' />
         <a href="#2"  children="OuterSpace" />
       </a>
-      <a href="#2" className="top-right" children="Experiment V1" />
+      <a href='#1' className="absolute top-right btn-round-lg" type="button" value="Go my space" > SIGN IN</a>  
+      <a href="#2" className="absolute bottom-left" children="Experiment V1" />
       <div class="arrow">
                 <span></span>
                 <span></span>

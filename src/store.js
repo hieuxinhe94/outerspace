@@ -7,23 +7,23 @@ import create from 'zustand'
 import * as audio from './audio'
 
 const state = {
-  sections: 9,
-  pages: 5,
-  zoom: 50,
+  sections: 4,
+  pages: 4,
+  zoom: 35,
   paragraphs: [
     {
-      offset: 1,
-      factor: 1.75,
+      offset: 0.55,
+      factor: 2.5,
       header: "Back to the Ice <br/>",
       topic: "E-Learning, Metaverse",
       link: "",
       image: "/feature-img-1.jpeg",
-      aspect: 1.51,
+      aspect: 1.5,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      offset: 2,
-      factor: 2.00,
+      offset: 1,
+      factor: 2.5,
       header: "Lorem ipsum dolor sit amet",
       topic: "E-Learning, Metaverse",
       link: "",
@@ -32,23 +32,23 @@ const state = {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      offset: 3,
-      factor: 2.25,
+      offset: 1.5,
+      factor: 2.5,
       header: "Catalina",
       topic: "E-Learning, Metaverse",
       link: "",
       image: "/feature-img-1.jpeg",
-      aspect: 1.5037,
+      aspect: 1.5,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
-      offset: 4,
-      factor: 2.0,
+      offset: 2,
+      factor: 2.5,
       header: "Building 21",
       topic: "E-Learning, Metaverse",
       link: "",
       image: "/feature-img-1.jpeg",
-      aspect: 0.665,
+      aspect:1.5,
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     

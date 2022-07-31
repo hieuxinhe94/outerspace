@@ -15,7 +15,7 @@ function Block({ children, offset, factor, ...props }) {
     ref.current.position.y = lerp(curY, (curTop / state.zoom) * factor, 0.1)
   })
   return (
-    <offsetContext.Provider value={offset}>
+    <offsetContext.Provider value={offset} class="aa">
       <group {...props} position={[0, -sectionHeight * offset * factor, 0]}>
         <group ref={ref}>{children}</group>
       </group>
