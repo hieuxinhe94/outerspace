@@ -8,8 +8,8 @@ export default function Explore (){
   rootPage.style.overflowY = "scroll";
     return (<>
     <section className='section-content'>
-        <h1 className=''>Explore thousand of public space</h1>
-        <br/>
+        <h1 className=''>Explore thousands of public space</h1>
+         
         <div className='grid-lg'>
            <center class="grid-post"> 
            <Post />
@@ -17,14 +17,14 @@ export default function Explore (){
            <center class="grid-post"> 
            <Post />
             </center>
-          <div>
+      
           <center class="grid-post"> 
           <Post />
           </center>  
           <center class="grid-post"> 
           <Post />
           </center>  
-          </div>
+         
           </div>
 
         </section> 

@@ -294,7 +294,7 @@ export default function Home() {
                 <span></span>
                 <span></span>
                 <span></span>
-                <i class="lb-lg">Scroll to see more</i>
+                {/* <i class="lb-lg">Scroll to see more</i> */}
       </div>
       </section>
 
