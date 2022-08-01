@@ -1,15 +1,22 @@
 @import url('https://rsms.me/inter/inter.css');
 
-html,
-body,
-#root,
+#root{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+   
+  height: 100vh;
+    
+}
+ 
+
 .bg,
 canvas {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  
+   
 }
 
 body {
@@ -21,6 +28,14 @@ body {
   position: absolute;
   background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%);
 }
+
+#hero-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
 
 #hero-section> h1 {
   position: absolute;
@@ -80,7 +95,7 @@ body {
 
 
 
-#hero-section>.logo {
+.logo {
   font-weight: 400;
   font-size: 1.6em;
   color: inherit;
@@ -228,11 +243,7 @@ a:hover {
   color: #8b8b8b;
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
+ 
 
 .loading {
   padding: 10px;
@@ -244,8 +255,8 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw !important;
+  height: 100vh !important;
   overflow: auto;
 }
 
@@ -538,4 +549,86 @@ body{
   width:50%;
   transform: translate(10px,-5px) rotatez(45deg);
 
+}
+
+.menu {
+  background: #f5f5f5;
+  border-radius: 8px;
+  position: absolute;
+  top: 100px;
+  right: 55px;
+  width: 200px;
+  min-height: 250px;
+  border-radius: 20px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.menu li {
+  border-bottom: 1px solid #dddddd;
+  height: 35px;
+  font-size: 0.8em;
+ 
+  padding: 0px 0px 5px 0px;
+  color:rgb(21 16 65);
+  
+}
+ li:hover {
+  font-weight: 800;
+  color:rgb(10, 5, 54);
+}
+
+.menu li a {
+  text-decoration: none;
+  color:rgb(21 16 65);
+  padding: 15px 20px;
+  display: block;
+}
+ 
+
+.grid-lg {
+  height: 450px;
+  width: auto;
+  margin: 0px 0px 0px 0px;
+  padding-bottom: 100px;
+  color: #F5F5F5;
+  columns:150px 3;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  
+}
+
+.grid-post{
+  padding: 0px;
+  margin-bottom: 25px;
+  width: 350px;
+  height: 450px;
+
+  overflow: hidden;
+  word-wrap: normal;
+}
+
+.section-content {
+  margin: 100px 50px 0px 65px;
+ 
 }
