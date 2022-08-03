@@ -9,10 +9,10 @@ export default function Post ({data}){
 
   return (<>
     <div>
-      <img class="lb-lg" alt='' height={200} width={250} src='https://cdn2.unrealengine.com/tfoa-blog-feed-01-1920x1080-75716018bc86.jpg'/>
+      <img class="lb-lg" alt='' height={200} width={300} src='https://i.postimg.cc/9MKYMHPq/image.png'/>
     </div>
     <div >
-      <span class="lb-lg-2x"> New release brings Mesh to MetaHuman to Unreal Engine, and much more!</span>
+      <span class="lb-lg-2x"> New release Bloody Mary! - Gương thần</span>
     </div>
    
     <div>
