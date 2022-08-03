@@ -22,6 +22,7 @@ canvas {
 body {
   background: rgb(21 16 65) !important;
   font-family: 'Inter var', sans-serif;
+  cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png') 39 39, auto;
 }
 
 .bg {
@@ -360,6 +361,8 @@ a:hover {
   background-color: #000000;
   z-index: 83793736,
 }
+
+
 
 .arrow {
   position: absolute;
