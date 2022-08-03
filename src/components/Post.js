@@ -22,7 +22,7 @@ export default function Post ({data}){
       </span>
       </div>
     <br/>
-    <Link to="/scene?id=1&token=" class="btn-round-lg">EXPLORE</Link>
+    <Link to="/scene/1" class="btn-round-lg">EXPLORE</Link>
 </>)
 }
  

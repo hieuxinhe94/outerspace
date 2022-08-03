@@ -11,7 +11,7 @@ export default function Menu (){
     const onMenuClick = () => { console.log('clicked menu'); setIsActive(!isActive)};
 
     return (<>
-    <div  onMouseEnter={onMenuClick} onMouseDown={onMenuClick} className="absolute top-right menu-icon" type="button"> 
+    <div  onMouseEnter={onMenuClick} onClick={onMenuClick} className="absolute top-right menu-icon" type="button"> 
       <label    class="menu-icon" for="check">
         <input type="checkbox" id="check"/> 
         <span></span>
