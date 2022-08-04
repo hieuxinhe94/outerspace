@@ -17,7 +17,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="random-journey" element={<Explore />} />
           <Route path="scene/:id" element={<OtScene />} />
-          <Route path="otspace" element={<OtSpace />} />
+          <Route path="space/:id" element={<OtSpace />} />
           <Route path="sign-in" element={<SignIn />} />
           <Route path="*" element={<DevelopingPage />} />
         </Route>

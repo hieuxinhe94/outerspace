@@ -62,7 +62,8 @@ function FeatureSection({ image, index, offset, factor, header, aspect, text, to
           <div tabIndex={index}>{text}</div>
           <br/>
           <div tabIndex={index}>
-            <a href={link} class="btn-round-lg">Try It Now</a>
+           
+            <a href="/scene/1" class="btn-round-lg">EXPLORE NOW</a>
           </div>
         </Html>
         <Text left={left} right={!left} size={w * 0.02} color={color} top position={[((left ? -w : w) * size) / 2, (w * size) / aspect / 2 + 0.5, -1]}>

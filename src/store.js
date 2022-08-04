@@ -1,7 +1,7 @@
 import { createRef } from "react"
 import { Vector3 } from "three"
 import * as THREE from 'three'
-import { Curves } from 'three/examples/jsm/curves/CurveExtras'
+import { GrannyKnot } from 'three/examples/jsm/curves/CurveExtras'
 import { addEffect } from '@react-three/fiber'
 import create from 'zustand'
 import * as audio from './audio'
@@ -60,7 +60,7 @@ const state = {
 let guid = 1
 
 const useStore = create((set, get) => {
-  let spline = new Curves.GrannyKnot()
+  let spline = new GrannyKnot()
   let track = new THREE.TubeBufferGeometry(spline, 250, 0.2, 10, true)
   let cancelLaserTO = undefined
   let cancelExplosionTO = undefined

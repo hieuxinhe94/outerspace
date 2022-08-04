@@ -1,9 +1,11 @@
-import { FontLoader, Vector3, TextBufferGeometry } from "three"
+import {  Vector3,  } from "three"
 import React, { useCallback, useRef } from "react"
 import { useLoader, useFrame } from "@react-three/fiber"
 import { useAsset } from "use-asset"
 import lerp from "lerp"
 import {state} from "../store"
+import { TextGeometry as TextBufferGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 
 function Text({ children, size = 1, left, right, top, bottom, color = "white", opacity = 1, height = 0.01, layers = 0, font = "/MOONGET_Heavy.blob", ...props }) {
   const data = useLoader(FontLoader, font)
