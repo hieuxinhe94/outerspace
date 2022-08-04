@@ -187,6 +187,11 @@ body {
   z-index: 1;
 }
 
+.center {
+  top: 50%;
+  right: 50%;
+}
+
  .top-left {
   top: 60px;
   left: 60px;
@@ -646,4 +651,9 @@ body{
   width: 84px;
   height: 45px;
   margin: 0px 0px 0px 0px;
+}
+
+.btn-takeoff {
+  bottom: 100px;
+    left: 47%;
 }
