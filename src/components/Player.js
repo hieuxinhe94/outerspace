@@ -42,6 +42,8 @@ export const Player = (props) => {
     sideVector.set(Number(left) - Number(right), 0, 0)
     direction.subVectors(frontVector, sideVector).normalize().multiplyScalar(SPEED).applyEuler(camera.rotation)
     speed.fromArray(velocity.current)
+
+    
     axe.current.children[0].rotation.x = THREE.MathUtils.lerp(
       axe.current.children[0].rotation.x,
       Math.sin((speed.length() > 1) * state.clock.elapsedTime * 10) / 6,
@@ -54,15 +56,15 @@ export const Player = (props) => {
       0.1,
     )
 
-    axe.current.rotation.copy(camera.rotation)
-    axe.current.position.copy(camera.position).add(camera.getWorldDirection(rotation).multiplyScalar(1))
+   axe.current.rotation.copy(camera.rotation)
+   axe.current.position.copy(camera.position).add(camera.getWorldDirection(rotation).multiplyScalar(1))
     api.velocity.set(direction.x, velocity.current[1], direction.z)
     if (jump && Math.abs(velocity.current[1].toFixed(2)) < 0.05) api.velocity.set(velocity.current[0], 10, velocity.current[2])
   })
   return (
     <>
       <mesh ref={ref} />
-      <group ref={axe} onPointerMissed={(e) => {(axe.current.children[0].rotation.x = -0.5); axe.current.children[1].rotation.x = -0.5}}>
+      <group ref={axe} onPointerMissed={(e) => {  if(axe.current) {(axe.current.children[0].rotation.x = -0.5); axe.current.children[1].rotation.x = -0.5; console.log('onPointerMissed') ;}}}>
         <RightHand key={"1"} position={[0.2, -0, 0.15]} />
         <LeftHand key={"2"} position={[-0.2, -0, 0.15]} />
       </group>
