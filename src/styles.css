@@ -660,9 +660,130 @@ body{
 
 .control-player {
   bottom: 50px;
-    left: 47%;
+    left: 40%;
 }
 
 .joystick {
 
 }
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.ctl_menu {
+  font-family: arial;
+  background: #333;
+  display: table;
+  position: relative;
+  margin: 0 0.75rem;
+  box-shadow: 0 2rem 9rem rgba(0, 0, 0, 0.8);
+  width: inherit;
+}
+.ctl_menu:before, .ctl_menu:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0.75rem;
+  background: #333;
+}
+.ctl_menu:before {
+  left: -0.75rem;
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+.ctl_menu:after {
+  right: -0.75rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.ctl_menu_item {
+  display: block;
+  float: left;
+  white-space: nowrap;
+  color: #ccc;
+  padding: 10px 0px 15px 15px;
+  height: 100%;
+}
+.ctl_menu_item:last-child {
+  margin-right: 0;
+}
+.ctl_menu_item .toggle {
+  display: none;
+}
+.ctl_menu_item .toggle:checked ~ .expander {
+  color: rgb(252, 1, 1);
+  font-size: 0.75em;
+}
+.ctl_menu_item .toggle:checked ~ .expander .ctl_menu_icon {
+  color: #ffffff;
+  animation: none;
+  padding-top: 3px;
+}
+.ctl_menu_item .toggle:checked ~ .expander .ctl_menu_text {
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 800;
+}
+.ctl_menu_item .expander {
+  padding: 0px 5px 0px 0px;
+  
+  transition: all ease-in-out 233ms;
+}
+.ctl_menu_item .expander:hover {
+  font-size: 1.2em;
+}
+.ctl_menu_item .expander:hover .ctl_menu_icon {
+  color: #fff;
+  animation: jiggle ease-in-out 400ms infinite;
+}
+.ctl_menu_item label {
+  line-height: 1rem;
+}
+.ctl_menu_item .ctl_menu_icon {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 0.5rem;
+  transition: color ease-in-out 80ms;
+}
+.ctl_menu_item .ctl_menu_text {
+  color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  transition: color ease-out 333ms;
+}
+
+.ctl_menu_title {
+  color: #fff;
+  font-size: .75rem;
+  display: block;
+  float: left;
+ padding: 12px 15px 5px 15px;
+}
+
+ .positioner{
+  height: 55px;
+  width: 500px;
+  overflow: hidden;
+  padding: 10px 2px 3px 2px;
+  display: flex
+ }
+
+@keyframes jiggle {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotateZ(5deg);
+  }
+  75% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+/*for icon? */ 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");

@@ -1,5 +1,5 @@
 {
-  "name": "learn-with-jason",
+  "name": "outerspace",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,8 @@
     "styled-components": "5.1.0",
     "three": "0.142.0",
     "typewriter-effect": "^2.19.0",
-    "zustand": "3.4.1"
+    "zustand": "3.4.1",
+    "react-icons": "4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
